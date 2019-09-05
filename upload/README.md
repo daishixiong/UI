@@ -14,26 +14,21 @@
 - 3、使用
 
 
-- Attribute
-```
-| 参数 | 说明 | 类型 | 可选值	| 默认值
+#### Attribute
+
+| 参数 | 说明 | 类型 | 可选值	| 默认值 |
 
 | - | - | - | - | - |
 
-| type |  |  |
+| type        | 展示形态  | String  | avatar/uploadList | avatar |
 
-|  |  |  |
+| action      | 服务器接收地址 | String | - | - |
 
-|  |  |  |
+| disabled    | 是否禁用 | Boolean | true/false | false |
 
-|  | |   |
+| on-progress | 上传中回调 | function(file)  | - | - |
 
-|  |  | |
-```
-
-
-
-
+| on-success  | 上传成功回调 | function(file) | - | - |
 
 ##### 代码示例
 ```html
