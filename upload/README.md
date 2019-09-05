@@ -9,9 +9,31 @@
 - 1、下载安装依赖 
     - npm i vue-custom-upload;     
 - 2、引入、注册     
-    - import xxx form 'vue-custom-upload';
-    - vue.use(xxx);
+    - import Upload form 'vue-custom-upload';
+    - vue.use(Upload);
 - 3、使用
+
+
+- Attribute
+```
+| 参数 | 说明 | 类型 | 可选值	| 默认值
+
+| - | - | - | - | - |
+
+| type |  |  |
+
+|  |  |  |
+
+|  |  |  |
+
+|  | |   |
+
+|  |  | |
+```
+
+
+
+
 
 ##### 代码示例
 ```html
@@ -19,7 +41,7 @@
     <Upload
       ref="upLoad"
       :disabled="false"
-      action="http://172.16.72.130:3000/upLoad"
+      action="接收服务器地址"
       @on-progress="onProgress"
       @on-success="onSuccess">
         <div slot="uploadUI">
@@ -30,9 +52,9 @@
     // 照片墙 形态
     <Upload
       ref="upLoad"
-      type="uploadList"      // type 控制 形态 默认 avatar
+      type="uploadList"      
       :disabled="false"
-      action="http://172.16.72.130:3000/upLoad"
+      action="接收服务器地址"
       @on-progress="onProgress"
       @on-success="onSuccess">
         <div slot="showUI" slot-scope="{file}">
@@ -44,4 +66,6 @@
         </div>
     </Upload>
 ```
+
+
 
