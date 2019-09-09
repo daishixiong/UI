@@ -25,7 +25,7 @@
 </script>
 
 <style lang="less" scoped>
- .ul {
+ ul {
      display: flex;
      justify-content: flex-start;
  }
