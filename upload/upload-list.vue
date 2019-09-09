@@ -1,5 +1,5 @@
 <template>
-    <transition-group tag="ul" class="upload-list" name="el-list">
+    <transition-group tag="ul" name="el-list">
         <li v-for="file in files" :key="file.uuid">
             <slot :file="file"></slot>
         </li>
@@ -25,7 +25,7 @@
 </script>
 
 <style lang="less" scoped>
- .upload-list {
+ .ul {
      display: flex;
      justify-content: flex-start;
  }

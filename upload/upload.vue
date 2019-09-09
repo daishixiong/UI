@@ -136,22 +136,13 @@ export default {
     const customUI = this.$slots.content || this.$slots.default;
 
     return (<div {...data} class='upload'>
-      <div class='upload_content'>
         {customUI}
-        <input class="upload_input" type="file" ref="input" name={name} on-change={handleChange} multiple={multiple} accept={accept}/>
-      </div>
+      <input class="upload_input" type="file" ref="input" name={name} on-change={handleChange} multiple={multiple} accept={accept}/>
     </div>);
   }
 };
 </script>
 <style lang="less">
-    .upload_content {
-        position: relative;
-        border: 1px solid red;
-        width: 100px;
-        height: 100px;
-        z-index: 1;
-    }
     .upload_input {
         display: none;
         opacity: 0;
