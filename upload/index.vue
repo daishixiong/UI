@@ -49,7 +49,7 @@ export default {
 
   data () {
     return {
-      uploadFiles: [{value: 1, msg: '1', uuid: '1'}],
+      uploadFiles: [],
       i: 100
     };
   },
@@ -60,10 +60,8 @@ export default {
       handler (list) {
         list.map(item => {
           item.uuid = item.uuid || new Date().getTime();
-          item.value = item.value || this.i++;
           return item;
         });
-        console.log('list', list);
       }
     }
   },
@@ -73,8 +71,6 @@ export default {
       this.$emit('on-progress', res, rawFile);
     },
     handleSuccess (res, rawFile) {
-      console.log('成功', res);
-      // this.uploadFiles.push(this.i);
       this.$nextTick(_ => {
         this.uploadFiles.push(res);
         this.$emit('on-success', res, rawFile);

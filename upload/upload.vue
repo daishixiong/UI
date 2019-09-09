@@ -101,12 +101,10 @@ export default {
         filename: this.name,
         action: this.action,
         onProgress: e => {
-          console.log('onProgress');
           this.onProgress(e, rawFile);
         },
         onSuccess: res => {
-          console.log('onSuccess', rawFile);
-          this.onSuccess(rawFile);
+          this.onSuccess(res, rawFile);
         },
         onError: err => {
           console.log('报错了');
@@ -136,9 +134,9 @@ export default {
     const customUI = this.$slots.content || this.$slots.default;
 
     return (<div {...data} class='upload'>
-        {customUI}
-      <input class="upload_input" type="file" ref="input" name={name} on-change={handleChange} multiple={multiple} accept={accept}/>
-    </div>);
+          {customUI}
+          <input class="upload_input" type="file" ref="input" name={name} on-change={handleChange} multiple={multiple} accept={accept}/>
+      </div>);
   }
 };
 </script>
