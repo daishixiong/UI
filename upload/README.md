@@ -27,7 +27,7 @@
 #### way
 | 方法名 | 说明 | 参数 |
 | ------ | ------ | ------ |
-| remove | 删除某一项, this.$refs.xxx.remove({value: 'xxx'})  | (file), 当前 项对象， 会根据对象的 value字段作为删除标识 |
+| remove | 删除某一项, this.$refs.xxx.remove({uuid: 'xxx'})  | (file), 当前 项对象， 会根据对象的 标识字段(默认uuid)作为删除标识 |
 
 
 ##### 代码示例
