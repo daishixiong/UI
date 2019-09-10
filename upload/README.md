@@ -18,6 +18,7 @@
 | 参数 | 说明 | 类型 | 可选值	| 默认值 |
 | ------ | ------ | ------ | ------ | ----- |
 | type        | 展示形态  | String  | avatar/uploadList | avatar |
+| propKey     | 自定义 展示项标识（只有在 type='uploadList'时生效）| String  | - | uuid |
 | action      | 服务器接收地址 | String | - | - |
 | disabled    | 是否禁用 | Boolean | true/false | false |
 | on-progress | 上传中回调 | function(file)  | - | - |
@@ -46,7 +47,8 @@
     // 照片墙 形态
     <Upload
       ref="upLoad"
-      type="uploadList"      
+      type="uploadList" 
+      propKey="uuid"     
       :disabled="false"
       action="接收服务器地址"
       @on-progress="onProgress"

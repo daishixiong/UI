@@ -9,12 +9,17 @@ import UploadList from './upload-list.vue';
 
 export default {
   name: 'Upload',
+
   components: {
     UpLoad,
     UploadList
   },
 
   props: {
+    propKey: {
+      type: String,
+      default: 'uuid'
+    },
     type: {
       type: String, // avatar uploadList
       default: 'avatar'
@@ -81,12 +86,11 @@ export default {
     },
     handleRemove (file) {
       let i = this.uploadFiles.findIndex(item => {
-        return +item.value === +file.value;
+        return +item[this.propKey] === +file[this.propKey];
       });
       if (i !== -1) {
         this.uploadFiles.splice(i, 1);
       }
-      console.log('remove123', file);
     }
   },
 
